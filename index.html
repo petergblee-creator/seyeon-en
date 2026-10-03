@@ -120,6 +120,16 @@ details p{color:var(--muted);margin-top:10px;font-size:15px}
 .direct{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;font-size:15px;color:#c8d8ec}
 .direct b{display:block;color:#fff;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
 
+.gform{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:26px 28px}
+.gform h3{font-size:20px}.gform h3 span{font-weight:500;color:#9cc3f5}
+.gform p{color:#c8d8ec;margin:6px 0 18px;font-size:15px}
+.gbtns{display:flex;flex-wrap:wrap;gap:12px}
+.card-list{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:28px;flex-wrap:wrap}
+.card-list ul{list-style:none;font-size:15px;color:#fff}
+.card-list li{padding:4px 0}
+.card-list b{display:inline-block;width:96px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#9cc3f5}
+.card-list a:hover{text-decoration:underline}
+.card-list img{width:84px;height:84px;background:#fff;padding:4px;border-radius:6px}
 footer{background:#081a33;color:#8ea3bf;font-size:13px;padding:28px 0}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
@@ -354,33 +364,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="sec-head reveal">
       <div class="eyebrow" style="color:#9cc3f5">Contact</div>
       <h2>Start with a free consultation</h2>
-      <p>Leave a phone number, email or KakaoTalk ID — a nickname is fine. We'll reach out to you.</p>
     </div>
-    <div class="forms">
-      <div class="form-card reveal">
-        <h3>HQ / Management (English)</h3>
-        <p>For headquarters, regional finance, and management of the Korean entity.</p>
-        <a href="GOOGLE_FORM_EN_URL" target="_blank" rel="noopener" class="btn primary">Open Inquiry Form →</a>
-      </div>
-      <div class="form-card reveal">
-        <h3>Local Staff (한국어)</h3>
-        <p>한국 법인 재무·인사·총무 담당자님은 이쪽으로 접수해 주세요.</p>
-        <a href="GOOGLE_FORM_KR_URL" target="_blank" rel="noopener" class="btn primary">한국어 문의 접수 →</a>
-      </div>
-      <div class="form-card reveal" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyCAIAAABnRsZeAAAJFUlEQVR4nO3dQW4cuRmA0Wgwp0iA3CObHD6b3CPAzDFG2QSBIMP0WPzYZFW9t3Z3U9VdHyj5F/X2/v7+F4DOL7sXANyNrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWK/zjz47e2tWschdp3sO3Ml16153fs7XvOZr7trzbvMfK7sVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2NSU7diuidWxddOQMzOaY2deyV2rOvNqjJ255nX3gt0KEJMVICYrQExWgJisADFZAWKyAsRkBYjJChBbOGU7tuu80hnrzjo987Fju05vvd+Js1e8F8bsVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2LYp26dZd5btzIzm/SZWOYHdChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQM2X7E3adDDozzzozKbvrjNV15+/uegefxm4FiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYhtm7K937zjulnYMx8744rn7667Vve7F+xWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoDYwinbdSeh7rJrvnPGujU/7bEz7ncvjNmtADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxqSnb+53BObbu6z1zBnfGFU/YnXHFNa9jtwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxBaeZTtjZvpz3XmluyZHx2s+c1J25kxZPtr1iZ1htwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxN7OPJ9113TgFWdDd13nXddq11TxzNd7xTXPsFsBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWLbzrLddeLsulnJK56he+Z1nrFr2nXG/WbK7VaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNjUWba7ZjRnnnnszLNs73cS6pnXecaZ87szTNkCB5EVICYrQExWgJisADFZAWKyAsRkBYjJChDbdpbtjF2TwTPOnBte97ozzpwqXufMU4Fn2K0AMVkBYrICxC75G8xnrvk1r/v++91+U/aHfvlb9lR+tvIaditATFaAmKwAMVkBYrICxBZO2Z75fz1n/uR87ONX9MdvGxdyAes+deseO+PMKWq7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgduhZtk5yqZ75y/75j7+P/8G//v2f16zkk5n3aN1jd83vnmnhMU67bpV7Z2X18P4Pa/Kt1X35dIzTmbeZrHwkKz/x2LFLZ+ULNfnWor7IyhfXtI+s/MRjxy6alSQoH+VxkZUvrmkfP7J9tLwpi56Ta7Fb+YnHjl1rt/KCm7/attitfHFN+9itPNFrNhS2LY8lK4/zyrtdWZ5JVp7l9fe5sjyQrDzIrjtcWZ7m0CnbsTN/KHvFH61dQnhhz/yPghm7vqIxu5Wn2LtlsGF5FFl5hBPu6hPWwGvIChCTlfs7Z5twzkpYSlaAmKwAMVm5udO+7zhtPawgK0BMVoDY1JTtrlNFZ2w5F3bydT9eq/ff96x/o0+XbtenbvwO7vpc7TrKY8xuBYjJChCTFSAmK0BMVoCYrNzcrr89+D2nrYcVZAWIyQoQk5X7O+f7jnNWwlLbzrL155r4kz69oa/5M2/tY2es+7Svu1PsVh7hhG3CCWvgNWTlKfbe1ZryKLICxGTlQXZtGWxVnkZWnuX1d7imPJCsPM4r73NNeSZZeaLX3O2a8lhvZ57Sdr+5lTNPh1t0YHUblLe/PnpuZezMT7vdyqOt2FDYpLBwt7Kr3/f2x2/9c1Z7lkVB+bRb+cE/3rSXmXnmsTN3Z2Pbhvc5xHxTbE/4RFb4IjXhe2SF7xIOvsaPbB9t8B2QpvBldit8JihMkpXn+narIigkfBPE/2gKFbsVBIWY3cpD/f87IE0hN7VbueL83zpnzncOCMonV/zUzVg4Yf+0seJ1XnM1VgzvH+5lw/tjZ/5S7tiuNfsmCIjJChCTFSAmK0BMVoCYrAAxWQFisgLEFv5O0K5TzncN2s287p9fVXvy/iV8ujjj63zFUcldn7p118puBYjJChCTFSAmK0DMMU4X8+2v8575A+wr/uFRKnYrQExWgJisADFZAWKXPHRyxrrXveKhhDOu+APdXZ/2GWfO0Y7ZrQAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAsYVTtmdOB5755+iftqqxp6155pnXmVmz3QoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKENv258d2zYaeOe+468zRsXXzrOveo6edkXzm6ct2K0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitAbOFZtmO7piHHzpzBnXG/aeb7vUczzpzBtVsBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWJTU7ZPs2uqeN17dObU6Znnwp75Lpz5FdmtADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxX2cefOaM5oxdM8dnvu6ZZ8qeeZbtumu167Ez7FaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNjUlO3Ymafknjnfeb+J1fud/DrzzDPWTQY7yxa4DFkBYrICxGQFiMkKEJMVICYrQExWgJisALGFU7ZjV5wd3DVXOrZucvTM150xs6ozv6Iz3wW7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgtm3Klo/WnaI6M/s7M8G5buZ43ap2nZK760ThdauyWwFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYqZsf8KZU6e75krHdp2ium6qeMbT3gW7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgtm3Kdt1E4y67zljdNVe66+TX+7nf1bBbAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFiC6dsrzgdOGPd13vFKcz7nQs7Y9ead82y260AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALG3+50pC+xltwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChD7L+Q39x0hKLYJAAAAAElFTkSuQmCC" alt="KakaoTalk QR" style="width:132px;height:132px;border-radius:8px;background:#fff;padding:6px">
-        <div>
-          <h3>KakaoTalk</h3>
-          <p style="margin-bottom:12px">Scan or search ID <b style="color:#FEE500">darou98</b>.<br>카톡 ID로 바로 문의하셔도 됩니다.</p>
-          <a href="https://open.kakao.com/o/sF4UcUPi" target="_blank" rel="noopener" class="btn" style="background:#FEE500;color:#3C1E1E">Open KakaoTalk →</a>
-        </div>
+
+    <div class="gform reveal">
+      <h3>Google Form Inquiry <span>· 구글폼 문의</span></h3>
+      <p>Takes 1 minute. A nickname is fine. · 1분이면 작성 가능합니다. 닉네임도 괜찮습니다.</p>
+      <div class="gbtns">
+        <a href="GOOGLE_FORM_EN_URL" target="_blank" rel="noopener" class="btn primary">English Form →</a>
+        <a href="GOOGLE_FORM_KR_URL" target="_blank" rel="noopener" class="btn primary">한국어 양식 →</a>
       </div>
     </div>
-    <div class="direct reveal">
-      <div><b>Email</b>gblee@seyeon-tax.com</div>
-      <div><b>Phone</b>+82-10-3945-6101</div>
-      <div><b>KakaoTalk</b>ID: darou98</div>
-      <div><b>Office</b>3F, 27 Eonju-ro 159-gil, Gangnam-gu, Seoul 06024, Korea</div>
+
+    <div class="card-list reveal">
+      <ul>
+        <li><b>Phone</b><a href="tel:+821039456101">+82-10-3945-6101</a></li>
+        <li><b>Email</b><a href="mailto:gblee@seyeon-tax.com">gblee@seyeon-tax.com</a></li>
+        <li><b>KakaoTalk</b><a href="https://open.kakao.com/o/sF4UcUPi" target="_blank" rel="noopener">ID: darou98</a></li>
+        <li><b>Office</b>3F, 27 Eonju-ro 159-gil, Gangnam-gu, Seoul 06024</li>
+      </ul>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyCAIAAABnRsZeAAAJFUlEQVR4nO3dQW4cuRmA0Wgwp0iA3CObHD6b3CPAzDFG2QSBIMP0WPzYZFW9t3Z3U9VdHyj5F/X2/v7+F4DOL7sXANyNrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWK/zjz47e2tWschdp3sO3Ml16153fs7XvOZr7trzbvMfK7sVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2NSU7diuidWxddOQMzOaY2deyV2rOvNqjJ255nX3gt0KEJMVICYrQExWgJisADFZAWKyAsRkBYjJChBbOGU7tuu80hnrzjo987Fju05vvd+Js1e8F8bsVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2LYp26dZd5btzIzm/SZWOYHdChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQM2X7E3adDDozzzozKbvrjNV15+/uegefxm4FiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYhtm7K937zjulnYMx8744rn7667Vve7F+xWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoDYwinbdSeh7rJrvnPGujU/7bEz7ncvjNmtADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxqSnb+53BObbu6z1zBnfGFU/YnXHFNa9jtwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxBaeZTtjZvpz3XmluyZHx2s+c1J25kxZPtr1iZ1htwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxN7OPJ9113TgFWdDd13nXddq11TxzNd7xTXPsFsBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWLbzrLddeLsulnJK56he+Z1nrFr2nXG/WbK7VaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNjUWba7ZjRnnnnszLNs73cS6pnXecaZ87szTNkCB5EVICYrQExWgJisADFZAWKyAsRkBYjJChDbdpbtjF2TwTPOnBte97ozzpwqXufMU4Fn2K0AMVkBYrICxC75G8xnrvk1r/v++91+U/aHfvlb9lR+tvIaditATFaAmKwAMVkBYrICxBZO2Z75fz1n/uR87ONX9MdvGxdyAes+deseO+PMKWq7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgduhZtk5yqZ75y/75j7+P/8G//v2f16zkk5n3aN1jd83vnmnhMU67bpV7Z2X18P4Pa/Kt1X35dIzTmbeZrHwkKz/x2LFLZ+ULNfnWor7IyhfXtI+s/MRjxy6alSQoH+VxkZUvrmkfP7J9tLwpi56Ta7Fb+YnHjl1rt/KCm7/attitfHFN+9itPNFrNhS2LY8lK4/zyrtdWZ5JVp7l9fe5sjyQrDzIrjtcWZ7m0CnbsTN/KHvFH61dQnhhz/yPghm7vqIxu5Wn2LtlsGF5FFl5hBPu6hPWwGvIChCTlfs7Z5twzkpYSlaAmKwAMVm5udO+7zhtPawgK0BMVoDY1JTtrlNFZ2w5F3bydT9eq/ff96x/o0+XbtenbvwO7vpc7TrKY8xuBYjJChCTFSAmK0BMVoCYrNzcrr89+D2nrYcVZAWIyQoQk5X7O+f7jnNWwlLbzrL155r4kz69oa/5M2/tY2es+7Svu1PsVh7hhG3CCWvgNWTlKfbe1ZryKLICxGTlQXZtGWxVnkZWnuX1d7imPJCsPM4r73NNeSZZeaLX3O2a8lhvZ57Sdr+5lTNPh1t0YHUblLe/PnpuZezMT7vdyqOt2FDYpLBwt7Kr3/f2x2/9c1Z7lkVB+bRb+cE/3rSXmXnmsTN3Z2Pbhvc5xHxTbE/4RFb4IjXhe2SF7xIOvsaPbB9t8B2QpvBldit8JihMkpXn+narIigkfBPE/2gKFbsVBIWY3cpD/f87IE0hN7VbueL83zpnzncOCMonV/zUzVg4Yf+0seJ1XnM1VgzvH+5lw/tjZ/5S7tiuNfsmCIjJChCTFSAmK0BMVoCYrAAxWQFisgLEFv5O0K5TzncN2s287p9fVXvy/iV8ujjj63zFUcldn7p118puBYjJChCTFSAmK0DMMU4X8+2v8575A+wr/uFRKnYrQExWgJisADFZAWKXPHRyxrrXveKhhDOu+APdXZ/2GWfO0Y7ZrQAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAsYVTtmdOB5755+iftqqxp6155pnXmVmz3QoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKENv258d2zYaeOe+468zRsXXzrOveo6edkXzm6ct2K0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitAbOFZtmO7piHHzpzBnXG/aeb7vUczzpzBtVsBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWJTU7ZPs2uqeN17dObU6Znnwp75Lpz5FdmtADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxX2cefOaM5oxdM8dnvu6ZZ8qeeZbtumu167Ez7FaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNjUlO3Ymafknjnfeb+J1fud/DrzzDPWTQY7yxa4DFkBYrICxGQFiMkKEJMVICYrQExWgJisALGFU7ZjV5wd3DVXOrZucvTM150xs6ozv6Iz3wW7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgtm3Klo/WnaI6M/s7M8G5buZ43ap2nZK760ThdauyWwFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYqZsf8KZU6e75krHdp2ium6qeMbT3gW7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgtm3Kdt1E4y67zljdNVe66+TX+7nf1bBbAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFiC6dsrzgdOGPd13vFKcz7nQs7Y9ead82y260AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALG3+50pC+xltwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChD7L+Q39x0hKLYJAAAAAElFTkSuQmCC" alt="KakaoTalk QR code">
     </div>
   </div>
 </section>
