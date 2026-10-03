@@ -162,6 +162,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .hero-side .hero-me img{width:56px;height:68px;margin:0;border-width:2px}
 @media(max-width:760px){.hero-side{width:100%}}
 @media(max-width:760px){.hero-grid{grid-template-columns:1fr}.hero-me{display:flex;align-items:center;gap:12px;text-align:left}.hero-me img{width:72px;height:88px;margin:0}}
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.lk{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px;transition:.2s}
+a.lk:hover{border-color:var(--accent)}
+.lk small{display:block;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:4px}
+.lk b{display:block;color:var(--navy);font-size:16px}
+.lk span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.links-note{font-size:12.5px;color:var(--muted);margin-top:12px}
 /* reveal */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 .reveal.show{opacity:1;transform:none}
@@ -192,7 +199,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap mega-grid">
       <div><h4><a href="#who">고객 대상</a></h4><a href="#who">북미</a><a href="#who">유럽</a><a href="#who">기타 영어권</a></div>
       <div><h4><a href="#services">서비스</a></h4><a href="#svc1">기장·결산·본사보고</a><a href="#svc2">법인세·신고</a><a href="#svc3">국제조세</a><a href="#svc4">급여·주재원</a><a href="#svc5">감사·감사대응</a><a href="#svc6">외부 CFO</a></div>
-      <div><h4><a href="#about">회계사 소개</a></h4><a href="#about">프로필 — 이규범</a><a href="#about">경력</a><a href="#about">공공 활동</a><a href="#faq">자주 묻는 질문</a></div>
+      <div><h4><a href="#about">회계사 소개</a></h4><a href="#about">프로필 — 이규범</a><a href="#about">경력</a><a href="#about">공공 활동</a><a href="#links">협력사·유관기관</a><a href="#faq">자주 묻는 질문</a></div>
       <div><h4><a href="#process">진행 절차</a></h4><a href="#process">1. 문의 접수</a><a href="#process">2. 무료 30분 상담</a><a href="#process">3. 명확한 제안</a></div>
       <div><h4><a href="#contact">연락처</a></h4><a href="#contact">구글폼 문의 (1분)</a><a href="tel:+821039456101">전화</a><a href="mailto:gblee@seyeon-tax.com">이메일</a><a href="https://open.kakao.com/o/sF4UcUPi" target="_blank" rel="noopener">카카오톡</a></div>
       <div><h4><a href="#kr">한국 담당자</a></h4><a href="#kr">본사 보고</a><a href="#kr">국내 실무</a><a href="#kr">현 세무대리인 점검</a></div>
@@ -419,6 +426,30 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       </div>
       <a href="#contact" class="btn dark">연락처 · 문의 바로가기 ↓</a>
     </div>
+  </div>
+</section>
+
+<!-- LINKS -->
+<section id="links" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">협력사 · 유관기관</div>
+      <h2>창구는 하나, 뒤에는 전문 네트워크</h2>
+      <p>비자·은행·법무는 협력사와 연계하되, 연락은 저희 한 곳으로 하시면 됩니다.</p>
+    </div>
+    <h3 class="reveal" style="font-size:16px;color:var(--navy);margin-bottom:12px">협력 네트워크</h3>
+    <div class="links-grid reveal" style="margin-bottom:28px">
+      <div class="lk"><small>비자·출입국</small><b>K-Withus</b><span>주재원 취업비자·체류 업무</span></div>
+      <div class="lk"><small>은행</small><b>신한은행</b><span>법인계좌·해외송금</span></div>
+      <div class="lk"><small>노무·법무</small><b>제휴 법무법인</b><span>노무·법률 이슈 연계</span></div>
+    </div>
+    <h3 class="reveal" style="font-size:16px;color:var(--navy);margin-bottom:12px">유관기관 바로가기</h3>
+    <div class="links-grid reveal">
+      <a class="lk" href="https://www.investkorea.org" target="_blank" rel="noopener"><small>투자 지원</small><b>Invest KOREA ↗</b><span>KOTRA 외국인투자 지원 기관</span></a>
+      <a class="lk" href="https://www.nts.go.kr/english/main.do" target="_blank" rel="noopener"><small>국세</small><b>국세청 ↗</b><span>국세청 영문 안내</span></a>
+      <a class="lk" href="https://www.hometax.go.kr" target="_blank" rel="noopener"><small>국세</small><b>Hometax ↗</b><span>온라인 세무신고 포털</span></a>
+    </div>
+    <p class="links-note">유관기관 링크는 참고용이며, 해당 기관의 보증·제휴를 의미하지 않습니다.</p>
   </div>
 </section>
 
