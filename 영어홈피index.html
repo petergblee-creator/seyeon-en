@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seyeon Accounting Corp. | Korea Accounting, Tax &amp; Payroll for Foreign Companies</title>
+<meta name="description" content="One-stop accounting, tax, payroll and audit support in English for foreign companies in Korea with an English-speaking HQ. Seyeon Accounting Corp., Seoul.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2545; --blue:#1d4e89; --sky:#e8f1fb; --line:#d9e3ef;
+  --ink:#1b2430; --muted:#5b6778; --bg:#ffffff; --soft:#f6f9fc; --accent:#2f80ed;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,"Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-weight:800;color:var(--navy);font-size:18px;letter-spacing:-.2px}
+.logo span{color:var(--accent)}
+.menu{display:flex;gap:22px;font-size:14px;font-weight:500;color:var(--muted)}
+.menu a:hover{color:var(--navy)}
+.lang{display:flex;gap:6px;font-size:13px}
+.lang a{padding:4px 9px;border:1px solid var(--line);border-radius:4px;color:var(--muted)}
+.lang a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media(max-width:860px){.menu{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);color:#fff;padding:88px 0 80px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#9cc3f5}
+.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.15;font-weight:800;margin:14px 0 18px;letter-spacing:-.8px}
+.hero p.lead{font-size:clamp(16px,2vw,19px);max-width:680px;color:#dbe8f7}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:600;font-size:15px;transition:.2s}
+.btn.primary{background:#fff;color:var(--navy)}
+.btn.primary:hover{background:var(--sky)}
+.btn.ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.dark:hover{background:var(--blue)}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.badges span{font-size:13px;padding:6px 12px;border:1px solid rgba(255,255,255,.3);border-radius:20px;color:#dbe8f7}
+
+/* sections */
+section{padding:84px 0}
+section.alt{background:var(--soft)}
+.sec-head{max-width:720px;margin-bottom:44px}
+.sec-head .eyebrow{color:var(--accent)}
+.sec-head h2{font-size:clamp(26px,3.5vw,36px);color:var(--navy);margin:10px 0 12px;letter-spacing:-.5px;line-height:1.25}
+.sec-head p{color:var(--muted)}
+
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px}
+.card h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{list-style:none;margin-top:12px}
+.card li{font-size:14.5px;padding:5px 0 5px 22px;position:relative;color:var(--ink)}
+.card li:before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700}
+.num{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:10px;letter-spacing:1px}
+
+/* market strip */
+.markets{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.market{border-top:4px solid var(--accent);background:#fff;padding:26px;border-radius:0 0 10px 10px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.market.main{border-top-color:var(--navy)}
+.market .tag{display:inline-block;font-size:12px;font-weight:700;background:var(--sky);color:var(--blue);padding:3px 9px;border-radius:4px;margin-bottom:12px}
+.market h3{color:var(--navy);font-size:20px;margin-bottom:8px}
+.market p{color:var(--muted);font-size:15px}
+
+/* one-stop table */
+.stop{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:15px}
+.stop th{background:var(--sky);color:var(--navy);text-align:left;padding:14px 18px;font-size:15px}
+.stop td{padding:14px 18px;border-top:1px solid var(--line);vertical-align:top}
+.stop td:first-child{font-weight:600;color:var(--navy);width:32%}
+@media(max-width:600px){.stop td,.stop th{padding:12px}.stop td:first-child{width:40%}}
+
+/* profile */
+.profile{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+.photo{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--sky),#cfdff2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:14px;font-weight:600}
+.profile h3{font-size:26px;color:var(--navy)}
+.profile .role{color:var(--accent);font-weight:600;margin:4px 0 18px}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.creds span{font-size:13px;background:var(--sky);color:var(--blue);padding:5px 11px;border-radius:4px;font-weight:600}
+@media(max-width:760px){.profile{grid-template-columns:1fr}.photo{max-width:240px}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;position:relative}
+.step:before{counter-increment:s;content:"0" counter(s);font-size:30px;font-weight:800;color:var(--sky);-webkit-text-stroke:1px var(--accent);display:block;margin-bottom:6px}
+.step h3{font-size:17px;color:var(--navy);margin-bottom:6px}
+.step p{font-size:14.5px;color:var(--muted)}
+
+/* korean staff */
+.kr{font-family:"Noto Sans KR",Inter,sans-serif}
+.kr-box{background:#fff;border:2px solid var(--navy);border-radius:12px;padding:36px}
+.kr-box h2{font-size:clamp(22px,3vw,30px);color:var(--navy);margin:8px 0 12px;letter-spacing:-.5px}
+
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-bottom:10px}
+summary{font-weight:600;color:var(--navy);cursor:pointer;list-style:none;position:relative;padding-right:24px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:0;top:-2px;font-size:20px;color:var(--accent)}
+details[open] summary:after{content:"–"}
+details p{color:var(--muted);margin-top:10px;font-size:15px}
+
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.contact .sec-head h2{color:#fff}
+.contact .sec-head p{color:#c8d8ec}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.form-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:30px}
+.form-card h3{font-size:20px;margin-bottom:8px}
+.form-card p{color:#c8d8ec;font-size:15px;margin-bottom:20px}
+.direct{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;font-size:15px;color:#c8d8ec}
+.direct b{display:block;color:#fff;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+
+footer{background:#081a33;color:#8ea3bf;font-size:13px;padding:28px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">SEYEON<span>.</span> Accounting</a>
+    <nav class="menu">
+      <a href="#who">Who We Serve</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#process">How It Works</a>
+      <a href="#kr">한국 담당자</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang">
+      <a href="#" class="on">EN</a>
+      <a href="https://jp.seyeon-tax.com">JP</a>
+      <a href="https://seyeon-tax.com">KR</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow reveal">Korea Accounting · Tax · Payroll · Audit</div>
+    <h1 class="reveal">Your Korea finance desk.<br>One contact. In English.</h1>
+    <p class="lead reveal">Bookkeeping, tax filings, payroll and audit support for foreign-invested companies in Korea — handled end to end by a Korean CPA who is also a licensed US CPA. You get one point of contact, HQ-ready reporting, and straight answers.</p>
+    <div class="cta reveal">
+      <a href="#contact" class="btn primary">Request a Free Consultation</a>
+      <a href="#services" class="btn ghost">See What's Included</a>
+    </div>
+    <div class="badges reveal">
+      <span>Korean CPA</span><span>US CPA (Washington)</span><span>Big Four alumnus</span><span>English · Korean · Japanese</span><span>Reply within 1 business day</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHO -->
+<section id="who">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Who We Serve</div>
+      <h2>Built for any English-speaking HQ.</h2>
+      <p>If your headquarters works in English, we work the way you do — your reporting calendar, your formats, your questions answered in plain English.</p>
+    </div>
+    <div class="markets">
+      <div class="market main reveal">
+        <span class="tag">NORTH AMERICA</span>
+        <h3>US &amp; Canadian groups</h3>
+        <p>Month-end packages aligned to US GAAP, reconciliation to Korean statutory books, and direct coordination with your HQ controller and tax team.</p>
+      </div>
+      <div class="market reveal">
+        <span class="tag">EUROPE</span>
+        <h3>European groups</h3>
+        <p>IFRS-based group reporting, treaty and withholding tax questions, and transfer pricing documentation for Korean entities of EU / UK groups.</p>
+      </div>
+      <div class="market reveal">
+        <span class="tag">GLOBAL</span>
+        <h3>Any English-working company</h3>
+        <p>Singapore, Australia, India, the Middle East and beyond — if English is your working language, you get the same one-stop service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Services</div>
+      <h2>Everything your Korean entity needs — under one roof</h2>
+      <p>No hand-offs between multiple vendors. One engagement covers the full finance cycle.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card reveal">
+        <div class="num">01</div>
+        <h3>Monthly Bookkeeping &amp; Reporting</h3>
+        <p>Accurate books, closed on time, delivered in English.</p>
+        <ul><li>Monthly close &amp; HQ reporting package</li><li>K-GAAP ↔ US GAAP / IFRS mapping</li><li>Bank, AP/AR reconciliation</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">02</div>
+        <h3>Corporate Tax &amp; Compliance</h3>
+        <p>Every Korean filing handled and explained before it's due.</p>
+        <ul><li>Corporate income tax return &amp; tax adjustment</li><li>VAT, withholding tax filings</li><li>Annual tax calendar for HQ</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">03</div>
+        <h3>International Tax</h3>
+        <p>Cross-border issues handled with both sides in mind.</p>
+        <ul><li>Transfer pricing &amp; intercompany charges</li><li>Tax treaty / withholding on royalties, fees, dividends</li><li>Coordination with your US / home-country advisors</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">04</div>
+        <h3>Payroll &amp; Expat Support</h3>
+        <p>Korean payroll done right, including assignees.</p>
+        <ul><li>Monthly payroll &amp; four social insurances</li><li>Year-end tax settlement for employees</li><li>Expat tax, housing &amp; benefits treatment</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">05</div>
+        <h3>Audit &amp; Audit Support</h3>
+        <p>Statutory and group audits without the scramble.</p>
+        <ul><li>External audit (where required)</li><li>Group audit / PBC preparation</li><li>Internal control &amp; expense review</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">06</div>
+        <h3>Outsourced CFO &amp; HQ Liaison</h3>
+        <p>A senior finance lead for your Korean entity, without the hire.</p>
+        <ul><li>Budget, cash &amp; cost review</li><li>Answers to HQ questions, in English</li><li>Labor &amp; legal matters via partner law firms</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE-STOP -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Why One-Stop</div>
+      <h2>What changes when you work with us</h2>
+    </div>
+    <table class="stop reveal">
+      <tr><th>Common problem</th><th>How we handle it</th></tr>
+      <tr><td>Local reports HQ can't read</td><td>English reporting packages built to your HQ's format and calendar</td></tr>
+      <tr><td>Questions bounce between staff</td><td>You talk directly to the CPA doing the work — no account managers in between</td></tr>
+      <tr><td>Separate vendors for tax, payroll, audit</td><td>One engagement, one contact, one invoice</td></tr>
+      <tr><td>Surprises at filing deadlines</td><td>Annual tax calendar shared with HQ; issues flagged before they become costs</td></tr>
+      <tr><td>Local staff stuck between HQ and advisors</td><td>A Korean-language channel for your local team (see below)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">About</div>
+      <h2>A CPA who has sat on the HQ side, too</h2>
+    </div>
+    <div class="profile reveal">
+      <div class="photo">Photo</div>
+      <div>
+        <h3>Peter Lee <span style="font-size:17px;color:var(--muted);font-weight:500">(Lee Gyubum)</span></h3>
+        <div class="role">Deputy CEO · Seyeon Accounting Corp.</div>
+        <p>I spent my career on both sides of the table: as an auditor and advisor, and as the finance lead inside a foreign subsidiary reporting to headquarters. I know what HQ needs to see, and what local teams need to get it done.</p>
+        <div class="creds">
+          <span>Korean CPA</span><span>US CPA — Washington</span><span>~10 years in practice</span><span>JLPT N1</span>
+        </div>
+        <div class="grid g2" style="margin-top:8px">
+          <div class="card" style="padding:22px">
+            <h3 style="font-size:16px">Experience</h3>
+            <ul>
+              <li>Deloitte Anjin LLC (Deloitte Korea)</li>
+              <li>Finance Senior Manager, Colliers International Japan (Tokyo)</li>
+              <li>5 years in Japan, seconded from a Korean HQ to run treasury, tax and HR of its Japan subsidiary</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:22px">
+            <h3 style="font-size:16px">Public Roles</h3>
+            <ul>
+              <li>Member, Information Disclosure Review Committee, Yeoksam District Tax Office (2026–2028)</li>
+              <li>Contract review committee &amp; on-site inspections with Gangnam-gu Office</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">How It Works</div>
+      <h2>Three steps. No obligation.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Submit the form</h3><p>Leave a contact and pick what you need. Under 1 minute.</p></div>
+      <div class="step reveal"><h3>Free 30-min call</h3><p>We review your current setup and point out risks or gaps — free of charge.</p></div>
+      <div class="step reveal"><h3>Clear proposal</h3><p>A fixed monthly scope and fee in writing. Start whenever you're ready.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- KOREAN STAFF -->
+<section id="kr" class="alt kr">
+  <div class="wrap">
+    <div class="kr-box reveal">
+      <div class="eyebrow" style="color:var(--accent)">For Local Korean Staff · 한국 담당자 전용</div>
+      <h2>외국계 법인 재무·인사 담당자님, 한국어로 편하게 문의하세요</h2>
+      <p style="color:var(--muted)">본사는 영어로, 담당자님은 한국어로. 본사 보고와 국내 실무 사이에서 혼자 고민하지 않도록 같은 회계사가 양쪽을 함께 맡습니다.</p>
+      <div class="grid g3" style="margin:24px 0">
+        <div class="card"><h3 style="font-size:16px">본사 보고</h3><ul><li>영문 결산 패키지 작성 지원</li><li>본사 질의 영문 회신 대행</li></ul></div>
+        <div class="card"><h3 style="font-size:16px">국내 실무</h3><ul><li>급여·4대보험·연말정산</li><li>부가세·원천세·법인세 신고</li></ul></div>
+        <div class="card"><h3 style="font-size:16px">이런 경우에도</h3><ul><li>현재 세무대리인 업무 점검</li><li>감사 대응·자료 준비</li></ul></div>
+      </div>
+      <a href="GOOGLE_FORM_KR_URL" target="_blank" rel="noopener" class="btn dark">한국어 문의 접수 (Google Form)</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2>Quick answers</h2>
+    </div>
+    <div class="reveal">
+      <details><summary>We already have a local accountant. Can you review their work?</summary><p>Yes. A review of your current books and filings is a common starting point, and the first consultation is free.</p></details>
+      <details><summary>Do you work with our HQ's tax advisors?</summary><p>Yes. We coordinate directly with your HQ controller and tax advisors on intercompany, transfer pricing and reporting items.</p></details>
+      <details><summary>How is the fee structured?</summary><p>A fixed monthly fee based on agreed scope, confirmed in writing before we start. No surprise billing.</p></details>
+      <details><summary>How fast do you respond?</summary><p>Within one business day (KST). Urgent filing matters are handled the same day.</p></details>
+      <details><summary>Can you handle labor or legal issues?</summary><p>Yes, through partner law firms, coordinated through us so you keep a single point of contact.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" style="color:#9cc3f5">Contact</div>
+      <h2>Start with a free consultation</h2>
+      <p>Leave a phone number, email or KakaoTalk ID — a nickname is fine. We'll reach out to you.</p>
+    </div>
+    <div class="forms">
+      <div class="form-card reveal">
+        <h3>HQ / Management (English)</h3>
+        <p>For headquarters, regional finance, and management of the Korean entity.</p>
+        <a href="GOOGLE_FORM_EN_URL" target="_blank" rel="noopener" class="btn primary">Open Inquiry Form →</a>
+      </div>
+      <div class="form-card reveal">
+        <h3>Local Staff (한국어)</h3>
+        <p>한국 법인 재무·인사·총무 담당자님은 이쪽으로 접수해 주세요.</p>
+        <a href="GOOGLE_FORM_KR_URL" target="_blank" rel="noopener" class="btn primary">한국어 문의 접수 →</a>
+      </div>
+      <div class="form-card reveal" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyCAIAAABnRsZeAAAJFUlEQVR4nO3dQW4cuRmA0Wgwp0iA3CObHD6b3CPAzDFG2QSBIMP0WPzYZFW9t3Z3U9VdHyj5F/X2/v7+F4DOL7sXANyNrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWK/zjz47e2tWschdp3sO3Ml16153fs7XvOZr7trzbvMfK7sVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2NSU7diuidWxddOQMzOaY2deyV2rOvNqjJ255nX3gt0KEJMVICYrQExWgJisADFZAWKyAsRkBYjJChBbOGU7tuu80hnrzjo987Fju05vvd+Js1e8F8bsVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2LYp26dZd5btzIzm/SZWOYHdChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQM2X7E3adDDozzzozKbvrjNV15+/uegefxm4FiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYhtm7K937zjulnYMx8744rn7667Vve7F+xWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoDYwinbdSeh7rJrvnPGujU/7bEz7ncvjNmtADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxqSnb+53BObbu6z1zBnfGFU/YnXHFNa9jtwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxBaeZTtjZvpz3XmluyZHx2s+c1J25kxZPtr1iZ1htwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxN7OPJ9113TgFWdDd13nXddq11TxzNd7xTXPsFsBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWLbzrLddeLsulnJK56he+Z1nrFr2nXG/WbK7VaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNjUWba7ZjRnnnnszLNs73cS6pnXecaZ87szTNkCB5EVICYrQExWgJisADFZAWKyAsRkBYjJChDbdpbtjF2TwTPOnBte97ozzpwqXufMU4Fn2K0AMVkBYrICxC75G8xnrvk1r/v++91+U/aHfvlb9lR+tvIaditATFaAmKwAMVkBYrICxBZO2Z75fz1n/uR87ONX9MdvGxdyAes+deseO+PMKWq7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgduhZtk5yqZ75y/75j7+P/8G//v2f16zkk5n3aN1jd83vnmnhMU67bpV7Z2X18P4Pa/Kt1X35dIzTmbeZrHwkKz/x2LFLZ+ULNfnWor7IyhfXtI+s/MRjxy6alSQoH+VxkZUvrmkfP7J9tLwpi56Ta7Fb+YnHjl1rt/KCm7/attitfHFN+9itPNFrNhS2LY8lK4/zyrtdWZ5JVp7l9fe5sjyQrDzIrjtcWZ7m0CnbsTN/KHvFH61dQnhhz/yPghm7vqIxu5Wn2LtlsGF5FFl5hBPu6hPWwGvIChCTlfs7Z5twzkpYSlaAmKwAMVm5udO+7zhtPawgK0BMVoDY1JTtrlNFZ2w5F3bydT9eq/ff96x/o0+XbtenbvwO7vpc7TrKY8xuBYjJChCTFSAmK0BMVoCYrNzcrr89+D2nrYcVZAWIyQoQk5X7O+f7jnNWwlLbzrL155r4kz69oa/5M2/tY2es+7Svu1PsVh7hhG3CCWvgNWTlKfbe1ZryKLICxGTlQXZtGWxVnkZWnuX1d7imPJCsPM4r73NNeSZZeaLX3O2a8lhvZ57Sdr+5lTNPh1t0YHUblLe/PnpuZezMT7vdyqOt2FDYpLBwt7Kr3/f2x2/9c1Z7lkVB+bRb+cE/3rSXmXnmsTN3Z2Pbhvc5xHxTbE/4RFb4IjXhe2SF7xIOvsaPbB9t8B2QpvBldit8JihMkpXn+narIigkfBPE/2gKFbsVBIWY3cpD/f87IE0hN7VbueL83zpnzncOCMonV/zUzVg4Yf+0seJ1XnM1VgzvH+5lw/tjZ/5S7tiuNfsmCIjJChCTFSAmK0BMVoCYrAAxWQFisgLEFv5O0K5TzncN2s287p9fVXvy/iV8ujjj63zFUcldn7p118puBYjJChCTFSAmK0DMMU4X8+2v8575A+wr/uFRKnYrQExWgJisADFZAWKXPHRyxrrXveKhhDOu+APdXZ/2GWfO0Y7ZrQAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAsYVTtmdOB5755+iftqqxp6155pnXmVmz3QoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKENv258d2zYaeOe+468zRsXXzrOveo6edkXzm6ct2K0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitAbOFZtmO7piHHzpzBnXG/aeb7vUczzpzBtVsBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWJTU7ZPs2uqeN17dObU6Znnwp75Lpz5FdmtADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxX2cefOaM5oxdM8dnvu6ZZ8qeeZbtumu167Ez7FaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgNjUlO3Ymafknjnfeb+J1fud/DrzzDPWTQY7yxa4DFkBYrICxGQFiMkKEJMVICYrQExWgJisALGFU7ZjV5wd3DVXOrZucvTM150xs6ozv6Iz3wW7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgtm3Klo/WnaI6M/s7M8G5buZ43ap2nZK760ThdauyWwFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYqZsf8KZU6e75krHdp2ium6qeMbT3gW7FSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgtm3Kdt1E4y67zljdNVe66+TX+7nf1bBbAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFiC6dsrzgdOGPd13vFKcz7nQs7Y9ead82y260AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALG3+50pC+xltwLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChD7L+Q39x0hKLYJAAAAAElFTkSuQmCC" alt="KakaoTalk QR" style="width:132px;height:132px;border-radius:8px;background:#fff;padding:6px">
+        <div>
+          <h3>KakaoTalk</h3>
+          <p style="margin-bottom:12px">Scan or search ID <b style="color:#FEE500">darou98</b>.<br>카톡 ID로 바로 문의하셔도 됩니다.</p>
+          <a href="https://open.kakao.com/o/sF4UcUPi" target="_blank" rel="noopener" class="btn" style="background:#FEE500;color:#3C1E1E">Open KakaoTalk →</a>
+        </div>
+      </div>
+    </div>
+    <div class="direct reveal">
+      <div><b>Email</b>gblee@seyeon-tax.com</div>
+      <div><b>Phone</b>+82-10-3945-6101</div>
+      <div><b>KakaoTalk</b>ID: darou98</div>
+      <div><b>Office</b>3F, 27 Eonju-ro 159-gil, Gangnam-gu, Seoul 06024, Korea</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Seyeon Accounting Corp. All rights reserved.</div>
+    <div><a href="https://seyeon-tax.com">Korean</a> · <a href="https://jp.seyeon-tax.com">日本語</a></div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+</script>
+</body>
+</html>
