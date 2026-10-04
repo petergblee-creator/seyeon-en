@@ -171,6 +171,25 @@ a.lk:hover{border-color:var(--accent)}
 .lk span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
 .links-note{font-size:12.5px;color:var(--muted);margin-top:12px}
 /* reveal */
+.svcx{display:flex;flex-direction:column;gap:22px}
+.svcx .sv{background:#fff;border:1px solid var(--line);border-top:3px solid var(--navy);border-radius:10px;padding:30px 32px}
+.svcx .sv-top{display:flex;align-items:baseline;gap:12px}
+.svcx .num{font-family:Georgia,serif;font-size:22px;font-weight:700;color:var(--accent)}
+.svcx .sv-name{font-weight:700;color:var(--navy);font-size:15px}
+.svcx h3{font-size:22px;line-height:1.4;margin:10px 0 8px;color:var(--ink)}
+.svcx .sv-desc{color:var(--muted);font-size:15.5px;line-height:1.8}
+.svcx .sv-when{margin-top:16px;background:#FFF6EE;border-left:3px solid var(--accent);padding:12px 16px;font-size:15px}
+.svcx .sv-when b,.svcx .sv-col b{display:block;font-size:12.5px;letter-spacing:.5px;color:var(--navy);margin-bottom:4px}
+.svcx .sv-when b{color:#9A3412}
+.svcx .sv-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.svcx .sv-col{border:1px solid var(--line);border-radius:8px;padding:14px 18px}
+.svcx .sv-col.prep{background:var(--soft)}
+.svcx .sv-col ul{list-style:none}
+.svcx .sv-col li{font-size:14.5px;padding:4px 0 4px 18px;position:relative}
+.svcx .sv-col li:before{content:"·";position:absolute;left:4px;color:var(--accent);font-weight:700}
+.svcx .sv-cta{display:inline-block;margin-top:16px;font-weight:700;color:var(--navy);border-bottom:2px solid var(--accent);padding-bottom:2px}
+.svcx .sv-cta:hover{color:var(--accent)}
+@media(max-width:720px){.svcx .sv{padding:22px 18px}.svcx .sv-cols{grid-template-columns:1fr}.svcx h3{font-size:19px}}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .reveal.show{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
@@ -244,7 +263,7 @@ a.lk:hover{border-color:var(--accent)}
   <div class="mega" id="mega">
     <div class="wrap mega-grid">
       <div><h4><a href="#who">Who We Serve</a></h4><a href="#who">North America</a><a href="#who">Europe</a><a href="#who">Global / English-speaking</a></div>
-      <div><h4><a href="#services">Services</a></h4><a href="#svc1">Bookkeeping &amp; Reporting</a><a href="#svc2">Corporate Tax</a><a href="#svc3">International Tax</a><a href="#svc4">Payroll &amp; Expat</a><a href="#svc5">Audit Support</a><a href="#svc6">Outsourced CFO</a></div>
+      <div><h4><a href="#services">Services</a></h4><a href="#svc1">HQ Reporting</a><a href="#svc2">Bookkeeping &amp; Close</a><a href="#svc3">Expat Payroll</a><a href="#svc4">External &amp; Voluntary Audit</a><a href="#svc5">Transfer Pricing</a><a href="#svc6">Korea Market Entry</a></div>
       <div><h4><a href="#about">About</a></h4><a href="#about">Profile — Peter Lee</a><a href="#about">Experience</a><a href="#about">Public Roles</a><a href="#links">Partners &amp; Links</a><a href="#faq">FAQ</a></div>
       <div><h4><a href="#process">How It Works</a></h4><a href="#process">1. Submit the form</a><a href="#process">2. Free 30-min call</a><a href="#process">3. Clear proposal</a></div>
       <div><h4><a href="#contact">Contact</a></h4><a href="#contact">Google Form (1 min)</a><a href="tel:+821039456101">Phone</a><a href="mailto:gblee@seyeon-tax.com">Email</a><a href="https://open.kakao.com/o/sF4UcUPi" target="_blank" rel="noopener">KakaoTalk</a></div>
@@ -341,42 +360,54 @@ a.lk:hover{border-color:var(--accent)}
       <h2>Everything your Korean entity needs — under one roof</h2>
       <p>No hand-offs between multiple vendors. One engagement covers the full finance cycle.</p>
     </div>
-    <div class="grid g3">
-      <div class="card reveal" id="svc1">
-        <div class="num">01</div>
-        <h3>Monthly Bookkeeping &amp; Reporting</h3>
-        <p>Accurate books, closed on time, delivered in English.</p>
-        <ul><li>Monthly close &amp; HQ reporting package</li><li>K-GAAP ↔ US GAAP / IFRS mapping</li><li>Bank, AP/AR reconciliation</li></ul>
+    <div class="svcx">
+      <div class="sv reveal" id="svc1">
+        <div class="sv-top"><span class="num">01</span><span class="sv-name">HQ Reporting</span></div>
+        <h3>Your numbers, in HQ format, before HQ close</h3>
+        <p class="sv-desc">We convert Korean-basis figures into the US GAAP or IFRS format your HQ uses and deliver them by your close date, with the reasons for each difference explained in English.</p>
+        <div class="sv-when"><b>When to talk to us</b>HQ reporting runs late every month, or your HQ team spends time re-reading and translating the Korean numbers</div>
+        <div class="sv-cols"><div class="sv-col"><b>What we cover</b><ul><li>Monthly and quarterly consolidation packages</li><li>K-GAAP to US GAAP / IFRS conversion and variance notes</li><li>Answers to HQ finance and group auditors, in English</li><li>Delivery managed against your HQ close calendar</li></ul></div><div class="sv-col prep"><b>Helpful to have ready</b><ul><li>Your HQ reporting package template and close calendar</li><li>Latest trial balance and financial statements</li><li>Prior-period variance explanations (if any)</li></ul></div></div>
+        <a href="#contact" class="sv-cta">Discuss this service →</a>
       </div>
-      <div class="card reveal" id="svc2">
-        <div class="num">02</div>
-        <h3>Corporate Tax &amp; Compliance</h3>
-        <p>Every Korean filing handled and explained before it's due.</p>
-        <ul><li>Corporate income tax return &amp; tax adjustment</li><li>VAT, withholding tax filings</li><li>Annual tax calendar for HQ</li></ul>
+      <div class="sv reveal" id="svc2">
+        <div class="sv-top"><span class="num">02</span><span class="sv-name">Bookkeeping &amp; Close</span></div>
+        <h3>From daily entries to the corporate tax return</h3>
+        <p class="sv-desc">A CPA reviews every voucher and entry, then carries the books through monthly close, year-end close and the corporate tax return. We start by matching the books to the actual transactions.</p>
+        <div class="sv-when"><b>When to talk to us</b>You are unsure whether the current books are right, or want gaps checked before closing and filing</div>
+        <div class="sv-cols"><div class="sv-col"><b>What we cover</b><ul><li>Bookkeeping and voucher review (every entry checked by a CPA)</li><li>Monthly trial balance with month-on-month comments</li><li>VAT and withholding tax filings</li><li>Year-end close, corporate tax return and interim prepayment</li></ul></div><div class="sv-col prep"><b>Helpful to have ready</b><ul><li>Business registration certificate and recent returns</li><li>Sales and purchase records, corporate bank statements</li><li>Latest financial statements and trial balance</li></ul></div></div>
+        <a href="#contact" class="sv-cta">Discuss this service →</a>
       </div>
-      <div class="card reveal" id="svc3">
-        <div class="num">03</div>
-        <h3>International Tax</h3>
-        <p>Cross-border issues handled with both sides in mind.</p>
-        <ul><li>Transfer pricing &amp; intercompany charges</li><li>Tax treaty / withholding on royalties, fees, dividends</li><li>Coordination with your US / home-country advisors</li></ul>
+      <div class="sv reveal" id="svc3">
+        <div class="sv-top"><span class="num">03</span><span class="sv-name">Expat Payroll</span></div>
+        <h3>Expat tax and insurance, set up properly</h3>
+        <p class="sv-desc">Expat pay costs depend on how it is split between HQ and the Korean entity, which tax method is chosen, and social insurance enrolment. We review the assignment terms against actual payments.</p>
+        <div class="sv-when"><b>When to talk to us</b>A new assignee is arriving, or you want to confirm that HQ-paid compensation and cost allocation are handled correctly</div>
+        <div class="sv-cols"><div class="sv-col"><b>What we cover</b><ul><li>Flat 19% expat tax option vs. progressive rates</li><li>HQ / Korean entity cost split and assignment letters</li><li>Totalization agreements to avoid double pension enrolment</li><li>Payroll, four social insurances and year-end settlement (local staff too)</li></ul></div><div class="sv-col prep"><b>Helpful to have ready</b><ul><li>Assignment letter / secondment agreement</li><li>Payslips including HQ-paid portions</li><li>Start date, visa type and basic details</li></ul></div></div>
+        <a href="#contact" class="sv-cta">Discuss this service →</a>
       </div>
-      <div class="card reveal" id="svc4">
-        <div class="num">04</div>
-        <h3>Payroll &amp; Expat Support</h3>
-        <p>Korean payroll done right, including assignees.</p>
-        <ul><li>Monthly payroll &amp; the four major social insurances</li><li>Year-end tax settlement for employees</li><li>Expat tax, housing &amp; benefits treatment</li></ul>
+      <div class="sv reveal" id="svc4">
+        <div class="sv-top"><span class="num">04</span><span class="sv-name">External &amp; Voluntary Audit</span></div>
+        <h3>From audit readiness to HQ-requested audits</h3>
+        <p class="sv-desc">From deciding whether a statutory audit applies, to voluntary audits of your HQ consolidation package. A former Deloitte CPA also handles communication with your group auditors.</p>
+        <div class="sv-when"><b>When to talk to us</b>Your entity is growing and may now require an audit, or HQ has asked for an audit or review of the Korean entity</div>
+        <div class="sv-cols"><div class="sv-col"><b>What we cover</b><ul><li>Statutory audit test and auditor-appointment timeline</li><li>Audit readiness: confirmations, counts, internal controls</li><li>Voluntary audit or review of the HQ package</li><li>Agreed-upon procedures (AUP) and reporting to group auditors</li></ul></div><div class="sv-col prep"><b>Helpful to have ready</b><ul><li>Financial statements for the last two years</li><li>Group audit instructions (if any)</li><li>Key contracts and related-party transaction list</li></ul></div></div>
+        <a href="#contact" class="sv-cta">Discuss this service →</a>
       </div>
-      <div class="card reveal" id="svc5">
-        <div class="num">05</div>
-        <h3>Audit &amp; Audit Support</h3>
-        <p>Statutory and group audits without the scramble.</p>
-        <ul><li>External audit (where required)</li><li>Group audit / PBC preparation</li><li>Internal control &amp; expense review</li></ul>
+      <div class="sv reveal" id="svc5">
+        <div class="sv-top"><span class="num">05</span><span class="sv-name">Transfer Pricing</span></div>
+        <h3>A defensible basis for every HQ charge</h3>
+        <p class="sv-desc">Royalties and service fees paid to HQ are the first thing Korean tax auditors look at. We review the rate basis, the contracts and withholding tax on remittances together.</p>
+        <div class="sv-when"><b>When to talk to us</b>You are setting royalty or fee rates to HQ, or want to confirm the supporting documents are in place</div>
+        <div class="sv-cols"><div class="sv-col"><b>What we cover</b><ul><li>Rate support and transfer pricing documentation</li><li>Review of HQ contracts (licence, services)</li><li>Treaty reduced-rate applications</li><li>International transaction filings</li></ul></div><div class="sv-col prep"><b>Helpful to have ready</b><ul><li>All contracts with HQ</li><li>Payment and remittance records to HQ</li><li>Prior-year corporate tax return and international filings</li></ul></div></div>
+        <a href="#contact" class="sv-cta">Discuss this service →</a>
       </div>
-      <div class="card reveal" id="svc6">
-        <div class="num">06</div>
-        <h3>Outsourced CFO &amp; HQ Liaison</h3>
-        <p>A senior finance lead for your Korean entity, without the hire.</p>
-        <ul><li>Budget, cash &amp; cost review</li><li>Answers to HQ questions, in English</li><li>Labor &amp; legal matters via partner law firms</li></ul>
+      <div class="sv reveal" id="svc6">
+        <div class="sv-top"><span class="num">06</span><span class="sv-name">Korea Market Entry</span></div>
+        <h3>Entry, operation and exit, through one contact</h3>
+        <p class="sv-desc">From comparing a subsidiary, branch or liaison office to foreign-investment registration, business registration, acquisitions and exit. The same CPA supports you at every stage.</p>
+        <div class="sv-when"><b>When to talk to us</b>You are planning a Korean base or an acquisition, or considering restructuring or closing an existing Korean entity</div>
+        <div class="sv-cols"><div class="sv-col"><b>What we cover</b><ul><li>Entity options: subsidiary, branch, liaison office</li><li>Foreign investment report, bank account, business registration</li><li>Acquiring a Korean company and post-deal merger</li><li>Dissolution, liquidation and remittance to HQ</li></ul></div><div class="sv-col prep"><b>Helpful to have ready</b><ul><li>Korean business plan (an outline is fine)</li><li>HQ registration documents and articles</li><li>Planned capital and team set-up</li></ul></div></div>
+        <a href="#contact" class="sv-cta">Discuss this service →</a>
       </div>
     </div>
   </div>
