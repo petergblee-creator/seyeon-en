@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Published fees for foreign-invested Korean entities: monthly bookkeeping by revenue band, English HQ reporting, payroll, year-end close and corporate tax, with an estimate calculator.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Fee Schedule for Foreign-invested Companies | Seyeon Accounting Corp.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16191f;--sub:#5d6573;--line:#e3e6eb;--soft:#F1F6FD;--navy:#1F3F6E;--blue:#3E6DB0;--or:#B5532A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans JP','Noto Sans KR','Hiragino Sans','Meiryo',sans-serif;color:#222;background:#fff;font-size:15px;line-height:1.7}
+a{color:var(--blue);text-decoration:none}button,input{font:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.lang{background:#F6F8FB;border-bottom:1px solid #DDE3EA;font-size:13px}.lang .wrap{display:flex;justify-content:flex-end;gap:14px;padding:6px 16px;color:#555}
+.hd .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding:16px}
+.logo{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:700;color:var(--blue)}
+.tel{display:flex;flex-direction:column;line-height:1.35;font-size:13px;color:var(--sub)}.tel a{font-size:18px;font-weight:700;color:#222}
+.nav{background:#D6E4F5;border-top:1px solid #C3D6EE;border-bottom:1px solid #C3D6EE}.nav .wrap{display:flex;flex-wrap:wrap}
+.nav a{min-height:44px;display:flex;align-items:center;padding:0 14px;font-weight:700;font-size:14px;color:var(--navy)}.nav a.on{background:#fff;color:#2F5590}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:6px;font-weight:700;font-size:15px;border:0;cursor:pointer}
+.btn.or{background:var(--or);color:#fff}.btn.ln{background:#fff;color:#222;border:1px solid #cfd4db}
+.pg{background:var(--soft);padding:30px 0 60px}
+.back{display:inline-block;margin-bottom:12px;font-size:14px;color:var(--sub);font-weight:600}
+.hero,.sec{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
+.sec{margin-top:18px;scroll-margin-top:12px}
+.badge{display:inline-block;background:#FFF4EC;color:#9A3412;font-weight:800;font-size:13px;padding:5px 11px;border-radius:6px}
+.hero h1{font-size:clamp(24px,4vw,38px);line-height:1.35;font-weight:900;margin:14px 0 10px;color:var(--ink)}.hero h1 em{font-style:normal;color:var(--or)}
+.hero p,.lead{color:var(--sub);font-size:15px}.lead{margin:6px 0 14px}
+.pts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.pts span{background:var(--soft);border:1px solid #D8E2EE;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700;color:var(--navy)}
+.sec h2{font-size:20px;font-weight:900;color:var(--ink);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.sec h2 small{font-size:13px;font-weight:500;color:var(--sub)}
+.rows{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.row{border:1px solid #D8E2EE;border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.row .k{font-size:14px}.row .k small{display:block;font-size:12px;color:var(--sub)}
+.row .v{text-align:right;font-weight:900;font-size:16px;white-space:nowrap}
+.note{margin-top:12px;font-size:13.5px;color:#444;background:#FAFBFC;border:1px solid var(--line);border-radius:10px;padding:12px 14px}.note li{margin-left:18px}
+.dis{background:#FFF8F2;border-color:#F3D3BF;margin:0 0 12px}.dis b{color:var(--or)}
+.calc{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:16px;align-items:start}@media(max-width:900px){.calc{grid-template-columns:1fr}}
+.cf{border:1px solid #D8E2EE;border-radius:12px;padding:16px}
+.q{margin-bottom:13px}.q>b{display:block;font-size:14px;margin-bottom:6px}.q .hint{font-size:12px;color:var(--sub);margin-top:3px}
+.q input[type=number]{width:100%;border:1.5px solid #cfd8e3;border-radius:8px;padding:8px 10px;font-size:15px}
+.ck{display:flex;align-items:center;gap:8px;font-size:14px;padding:3px 0;cursor:pointer}.ck input{width:17px;height:17px;accent-color:var(--blue)}
+.co{border:2px solid var(--blue);border-radius:12px;padding:16px;background:#F8FBFF}
+.co .tot{font-size:13px;color:var(--sub)}.co .tot b{display:block;font-size:28px;font-weight:900;color:var(--ink);line-height:1.3}.co .tot b em{font-style:normal;font-size:14px;color:var(--sub);font-weight:500}
+.li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #D8E2EE;font-size:14px}.li small{display:block;font-size:12px;color:var(--sub)}.li b{white-space:nowrap}
+.disc{font-size:12px;color:var(--sub);margin-top:10px}.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.dx{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.dx a{border:1px solid #D8E2EE;border-radius:12px;padding:14px 16px;color:#222;display:flex;flex-direction:column}.dx a b{color:var(--navy)}.dx a span{font-size:13px;color:var(--sub)}
+.ft{background:#0B2A6B;color:#C9D8F2;font-size:13px;padding:22px 0}.ft .wrap{display:flex;flex-wrap:wrap;gap:8px 18px}.ft b{color:#fff}
+.fs{position:fixed;right:12px;bottom:12px;z-index:50;width:38px;height:38px;border-radius:50%;border:1px solid #C3D6EE;background:#fff;color:var(--navy);font-size:17px;box-shadow:0 2px 8px rgba(0,0,0,.12);cursor:pointer}
+@media(max-width:600px){.hero,.sec{padding:18px 14px}}
+</style>
+</head>
+<body>
+<div class="lang"><div class="wrap"><b style="color:#3E6DB0">EN</b><span>｜</span><a href="https://jp.seyeon-tax.com/fee.html">JP</a><span>｜</span><a href="/ko.html">KR</a></div></div>
+<div class="hd"><div class="wrap"><a class="logo" href="/"><img src="/img/logo.png" alt="" style="width:40px;height:37px">Seyeon Accounting Corp.</a><div class="tel">Peter Lee, CPA (Korea & US)<a href="tel:+821039456101">+82-10-3945-6101</a></div></div></div>
+<div class="nav"><div class="wrap"><a href="/">Home</a><a href="fee.html" class="on">Published fees</a><a href="/#contact">Contact</a></div></div>
+<div class="pg"><div class="wrap">
+<a href="/#services" class="back">← Back to services</a>
+<div class="hero"><span class="badge">Published fees</span><h1>See the fee <em>before</em> you engage</h1><p>Fees are set in advance by your Korean entity’s revenue. Enter revenue and get a monthly and annual estimate instantly. Fixed scope, confirmed in writing — no surprise billing.</p><div class="pts"><span>Direct CPA access</span><span>EN & JP</span><span>Free first review</span><span>10% off year-end for bookkeeping clients</span></div></div>
+<div class="sec" id="calc"><h2>Fee estimator <small>enter revenue only</small></h2><p class="lead">Calculated from the schedule below. Korean VAT (10%) is added separately. Nothing you enter is stored.</p>
+<div class="calc"><div class="cf" id="cf"></div>
+<div class="co"><div class="tot">Annual estimate (12 months bookkeeping + year-end)<b id="o-year">0</b></div><div class="tot" style="margin-top:6px">Monthly<b id="o-mon" style="font-size:22px">0</b></div><div id="o-ls" style="margin-top:10px;border-top:1px solid #D8E2EE"></div>
+<div class="cta"><a href="#" data-form class="btn or">Discuss this estimate →</a><a href="https://open.kakao.com/o/sF4UcUPi" target="_blank" rel="noopener" class="btn ln">Ask on KakaoTalk</a></div><p class="disc">* Rough estimate rounded to KRW 50,000. Final fees depend on transaction volume, complexity and record quality, and are confirmed in writing before we start.</p></div></div></div>
+<div class="sec"><h2>1. Monthly bookkeeping <small>by annual revenue · per month · excl. VAT</small></h2><p class="lead">Ledger, monthly VAT and withholding filings and social-insurance notifications, handled together every month.</p><div class="rows" id="t-book"></div><div class="note"><ul><li>If revenue is below paid-in capital, capital is used as the base.</li><li>+10% where cost accounting is required (e.g. manufacturing).</li><li>+20% for professional-service firms earning mainly fees (min. KRW 100,000).</li></ul></div></div>
+<div class="sec"><h2>2. HQ reporting <small>per month</small></h2><div class="rows"><div class="row"><div class="k">Monthly report in English<small>P&L, cash and tax topics, in English</small></div><div class="v">+KRW 200,000</div></div><div class="row"><div class="k">HQ templates / consolidation packages<small>depends on format and volume</small></div><div class="v">Quoted</div></div></div></div>
+<div class="sec"><h2>3. Tax advisory (you keep the books) <small>per month</small></h2><p class="lead">Your in-house accountant keeps the ledger; we review filings and answer questions as they come up.</p><div class="rows" id="t-adv"></div></div>
+<div class="sec"><h2>4. Payroll & social insurance <small>per month · excl. VAT</small></h2><div class="rows"><div class="row"><div class="k">Payroll, payslips, withholding<small>up to 10 local employees</small></div><div class="v">KRW 200,000</div></div><div class="row"><div class="k">Payroll<small>11 employees or more</small></div><div class="v">KRW 15,000 / person</div></div><div class="row"><div class="k">Expat payroll & year-end settlement<small>treaty and home-country coordination</small></div><div class="v">Quoted</div></div></div></div>
+<div class="sec"><h2>5. Year-end close & corporate tax <small>once a year</small></h2><p class="lead">We close the books, prepare tax adjustments and file the corporate tax return. Amounts below already include the +20% for foreign-invested companies.</p><div class="note dis"><b>Bookkeeping-client discount −10%</b> → If we keep your books every month, the year-end close and corporate tax fee is reduced by 10% — we already know the ledger, so closing takes less work.</div><div class="rows" id="t-adj"></div><div class="note"><ul><li>Statutory audit +30% (voluntary audit +20%)</li><li>Tax incentive claims +20%</li><li>Equity-method workpapers +10%</li><li>Audit fees themselves are quoted separately.</li></ul></div></div>
+<div class="sec"><h2>Start with a free review</h2><p class="lead">Unsure your current advisor gets it right? Send us last year’s filings and we’ll review them free of charge.</p><div class="dx"><a href="/#contact"><b>Free review — Google Form ▶</b><span>1 minute to submit</span></a><a href="https://seyeon-tax.com/tools/fee.html"><b>Full schedule in Korean ▶</b><span>incl. capital gains, gift and inheritance</span></a><a href="https://jp.seyeon-tax.com/fee.html"><b>日本語の報酬表 ▶</b><span>Same schedule in Japanese</span></a></div></div>
+</div></div>
+<div class="ft"><div class="wrap"><b>Seyeon Accounting Corp.</b><span>3F, 27 Eonju-ro 159-gil, Gangnam-gu, Seoul 06024</span><span>+82-10-3945-6101</span><span>gblee@seyeon-tax.com</span></div></div>
+<button class="fs" id="fs" title="Full screen" aria-label="Full screen">⛶</button>
+<script>
+var LANG='en',T={"rev": "Revenue", "le": "or less", "over": "over", "nego": "By agreement", "rep": "report included", "lBook": "Monthly bookkeeping", "lRep": "English HQ report", "lPay": "Payroll & social insurance", "lExp": "Expat payroll", "lExpV": "Quoted separately", "lExpS": "incl. treaty and home-country social security coordination", "lAdj": "Year-end close & corporate tax (annual)", "lAdjS": "FDI +20% and bookkeeping-client −10% applied", "per": "/mo", "vatx": "excl. VAT", "qRev": "Annual revenue of the Korean entity (KRW 100M units)", "qRevH": "e.g. KRW 3 billion → enter 30", "qEmp": "Local (Korean) employees, excluding expats", "qChk": "Applies to you", "cRep": "Monthly HQ report in English", "cExp": "Expat payroll needed", "cAud": "Subject to statutory audit", "cRed": "Tax incentive applied"};
+var FORM_URL='https://docs.google.com/forms/d/e/1FAIpQLSddmsmvNsusmnc-T1l_dGm1wPc1bENdqRVkz6xcAZfKvaftSg/viewform';
+document.addEventListener('click',function(e){var a=e.target.closest('[data-form]');if(a){e.preventDefault();window.open(FORM_URL,'_blank','noopener');}});
+document.getElementById('fs').onclick=function(){try{if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen();}catch(e){}};
+var E=100000000;
+function r5(n){return n>=100000?Math.round(n/50000)*50000:Math.round(n/5000)*5000;}
+function won(n){n=Math.round(n/1000)*1000;return LANG==='en'?'KRW '+n.toLocaleString('en-US'):n.toLocaleString('ja-JP')+'ウォン';}
+function man(n){return LANG==='en'?'KRW '+n.toLocaleString('en-US'):(n/10000)+'万ウォン';}
+function eok(n){return LANG==='en'?'KRW '+(n>=10*E?(n/(10*E))+'B':(n/E*100)+'M'):(n/E)+'億ウォン';}
+var BOOK=[[5*E,250000],[10*E,300000],[15*E,350000],[20*E,400000],[30*E,450000],[50*E,550000],[100*E,700000],[200*E,1000000]];
+var ADV=[[100*E,250000,''],[300*E,450000,T.rep],[500*E,650000,T.rep],[Infinity,900000,T.rep]];
+var ADJ=[[0,405000,0],[2*E,405000,0.00144],[5*E,837000,0.00072],[10*E,1197000,0.00054],[50*E,3357000,0.000297],[100*E,4842000,0.000153],[500*E,10962000,0.000117],[1000*E,16812000,0.000054]];
+function prog(Tb,x){var r=Tb[0];for(var i=0;i<Tb.length;i++){if(x>=Tb[i][0])r=Tb[i];}return r[1]+(x-r[0])*r[2];}
+function adjFee(rev,pct){return r5(prog(ADJ,rev)*(1+0.2+pct));}
+(function(){var h='',lo=0;BOOK.forEach(function(b,i){h+='<div class="row"><div class="k">'+T.rev+' '+(i?eok(lo)+' – ':'')+eok(b[0])+(i?'':' '+T.le)+'</div><div class="v">'+man(b[1])+'</div></div>';lo=b[0];});
+h+='<div class="row"><div class="k">'+T.rev+' '+(LANG==='en'?T.over+' '+eok(200*E):eok(200*E)+T.over)+'</div><div class="v">'+T.nego+'</div></div>';document.getElementById('t-book').innerHTML=h;
+h='';ADV.forEach(function(a){h+='<div class="row"><div class="k">'+T.rev+' '+(a[0]===Infinity?(LANG==='en'?T.over+' '+eok(500*E):eok(500*E)+T.over):eok(a[0])+' '+T.le)+(a[2]?'<small>'+a[2]+'</small>':'')+'</div><div class="v">'+man(a[1])+'</div></div>';});document.getElementById('t-adv').innerHTML=h;
+h='';[5,10,30,50,100,300].forEach(function(x){h+='<div class="row"><div class="k">'+T.rev+' '+eok(x*E)+'</div><div class="v">'+man(adjFee(x*E,-0.1))+'</div></div>';});document.getElementById('t-adj').innerHTML=h;})();
+var S={rev:LANG==='en'?30:10,emp:3,rep:true,exp:false,aud:false,red:false};
+function cb(k,l){return '<label class="ck"><input type="checkbox" data-c="'+k+'"'+(S[k]?' checked':'')+'>'+l+'</label>';}
+document.getElementById('cf').innerHTML='<div class="q"><b>'+T.qRev+'</b><input type="number" min="0" step="1" data-n="rev" value="'+S.rev+'"><div class="hint">'+T.qRevH+'</div></div><div class="q"><b>'+T.qEmp+'</b><input type="number" min="0" step="1" data-n="emp" value="'+S.emp+'"></div><div class="q"><b>'+T.qChk+'</b>'+cb('rep',T.cRep)+cb('exp',T.cExp)+cb('aud',T.cAud)+cb('red',T.cRed)+'</div>';
+function li(a,s,v){return '<div class="li"><span>'+a+(s?'<small>'+s+'</small>':'')+'</span><b>'+v+'</b></div>';}
+function calc(){var rev=Math.max(0,+S.rev||0)*(LANG==='en'?E/100*10:E);
+ if(LANG==='en')rev=Math.max(0,+S.rev||0)*E/1;
+ var L='';if(rev>200*E){document.getElementById('o-year').textContent=T.nego;document.getElementById('o-mon').textContent=T.nego;document.getElementById('o-ls').innerHTML='';return;}
+ var bf=BOOK[BOOK.length-1][1];for(var i=0;i<BOOK.length;i++){if(rev<=BOOK[i][0]){bf=BOOK[i][1];break;}}
+ var mon=bf;L+=li(T.lBook,'',won(bf)+T.per);
+ if(S.rep){mon+=200000;L+=li(T.lRep,'',won(200000)+T.per);}
+ var emp=Math.max(0,Math.round(+S.emp||0));if(emp>0){var p=emp<=10?200000:r5(emp*15000);mon+=p;L+=li(T.lPay,emp,won(p)+T.per);}
+ if(S.exp)L+=li(T.lExp,T.lExpS,T.lExpV);
+ var pct=-0.1;if(S.aud)pct+=0.3;if(S.red)pct+=0.2;var adj=adjFee(rev,pct);L+=li(T.lAdj,T.lAdjS,won(adj));
+ document.getElementById('o-mon').innerHTML=won(mon)+' <em>'+T.per+'</em>';
+ document.getElementById('o-year').innerHTML=won(mon*12+adj)+' <em>'+T.vatx+'</em>';
+ document.getElementById('o-ls').innerHTML=L;}
+document.getElementById('cf').addEventListener('input',function(e){var n=e.target.dataset.n;if(n){S[n]=e.target.value;calc();}});
+document.getElementById('cf').addEventListener('change',function(e){var c=e.target.dataset.c;if(c){S[c]=e.target.checked;calc();}});
+calc();
+</script>
+</body>
+</html>
