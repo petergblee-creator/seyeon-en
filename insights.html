@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insights | Seyeon Accounting · Team Peter</title>
+<meta name="description" content="Practical notes on Korean tax, payroll and reporting for foreign-invested companies and their assignees.">
+<link rel="icon" href="favicon-32x32.png">
+<style>
+:root{--navy:#13294B;--accent:#1f6fd1;--ink:#1b1f27;--muted:#5b6575;--line:#e3e8ef}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6}
+header{background:var(--navy);color:#fff;padding:14px 20px}header a{color:#fff;text-decoration:none;font-weight:700}
+main{max-width:760px;margin:0 auto;padding:36px 20px 60px}
+h1{color:var(--navy);font-size:30px;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 26px}
+.item{display:block;border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:14px;text-decoration:none;color:inherit}
+.item:hover{border-color:var(--accent)}.item time{font-size:13px;color:var(--muted)}.item h2{font-size:19px;color:var(--navy);margin:4px 0 6px}.item p{margin:0;color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+<header><a href="https://en.seyeon-tax.com/">Seyeon Accounting · Team Peter</a></header>
+<main>
+<h1>Insights</h1>
+<p class="sub">Practical notes on Korean tax, payroll and HQ reporting — written by Peter Lee, CPA (Korea &amp; US).</p>
+<div id="list"></div>
+</main>
+<script>
+fetch('insights.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ const e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ document.getElementById('list').innerHTML=d.articles.slice().sort((a,b)=>a.date<b.date?1:-1).map(a=>'<a class="item" href="'+e(a.slug)+'"><time>'+e(a.date)+'</time><h2>'+e(a.title)+'</h2><p>'+e(a.summary)+'</p></a>').join('');
+});
+</script>
+</body>
+</html>
